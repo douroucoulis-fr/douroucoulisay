@@ -2,6 +2,7 @@ import os
 import argparse
 import random
 import textwrap
+from playsound import playsound
 
 def get_douroucouli_art(name):
     """Fetch the ASCII art for the specified douroucouli."""
@@ -42,6 +43,17 @@ def douroucoulisay(message, douroucouli=None):
     
     bubble = create_speech_bubble(message)
     print(f"\n{bubble}\n\n{douroucouli_art}")
+
+def tonal_hoot():
+    # Play the .wav file
+    playsound('/Users/caremico/Documents/douroucoulis/AOTOOLS/douroucoulisay/douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav')
+
+def gruff_hoot(): 
+    playsound("/Users/caremico/Documents/douroucoulis/AOTOOLS/douroucoulisay/douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav")
+
+def whoop():
+        # Play the .wav file
+    playsound("/Users/caremico/Documents/douroucoulis/AOTOOLS/douroucoulisay/douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav")
 
 def main():
     parser = argparse.ArgumentParser(description="Print a message with douroucouli ASCII art.")
