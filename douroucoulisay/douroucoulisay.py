@@ -43,17 +43,16 @@ def douroucoulisay(message, douroucouli=None):
     
     bubble = create_speech_bubble(message)
     print(f"\n{bubble}\n\n{douroucouli_art}")
-
 def tonal_hoot():
     # Play the .wav file
-    playsound('/Users/caremico/Documents/douroucoulis/AOTOOLS/douroucoulisay/douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav')
+    playsound('douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav')
 
 def gruff_hoot(): 
-    playsound("/Users/caremico/Documents/douroucoulis/AOTOOLS/douroucoulisay/douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav")
+    playsound("douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav")
 
 def whoop():
         # Play the .wav file
-    playsound("/Users/caremico/Documents/douroucoulis/AOTOOLS/douroucoulisay/douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav")
+    playsound("douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav")
 
 def main():
     parser = argparse.ArgumentParser(description="Print a message with douroucouli ASCII art.")
