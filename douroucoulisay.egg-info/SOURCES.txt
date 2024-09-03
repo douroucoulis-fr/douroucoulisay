@@ -7,6 +7,7 @@ douroucoulisay.egg-info/PKG-INFO
 douroucoulisay.egg-info/SOURCES.txt
 douroucoulisay.egg-info/dependency_links.txt
 douroucoulisay.egg-info/entry_points.txt
+douroucoulisay.egg-info/requires.txt
 douroucoulisay.egg-info/top_level.txt
 douroucoulisay/assets/douroucouli1.txt
 douroucoulisay/assets/douroucouli2.txt
@@ -14,3 +15,6 @@ douroucoulisay/assets/douroucouli3.txt
 douroucoulisay/assets/douroucouli4.txt
 douroucoulisay/assets/douroucouli5.txt
 douroucoulisay/assets/douroucouli6.txt
+douroucoulisay/assets/douroucouli7.txt
+douroucoulisay/assets/douroucouli8.txt
+douroucoulisay/assets/douroucouli9.txt

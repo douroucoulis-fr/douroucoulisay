@@ -2,6 +2,7 @@ import os
 import argparse
 import random
 import textwrap
+from playsound import playsound
 
 def get_douroucouli_art(name):
     """Fetch the ASCII art for the specified douroucouli."""
@@ -26,21 +27,38 @@ def create_speech_bubble(message):
 
     return bubble
 
-def douroucoulisay(message, douroucouli='douroucouli1'):
-    """Print the message with the selected douroucouli ASCII art."""
+def douroucoulisay(message, douroucouli=None):
+    """Print the message with a randomly selected douroucouli ASCII art."""
+    assets_dir = os.path.join(os.path.dirname(__file__), 'assets')
+    
+    if douroucouli is None:
+        # Randomly select a douroucouli file from the assets directory
+        available_douroucouli = [f.split('.')[0] for f in os.listdir(assets_dir) if f.endswith('.txt')]
+        douroucouli = random.choice(available_douroucouli)
+    
     try:
         douroucouli_art = get_douroucouli_art(douroucouli)
     except FileNotFoundError:
         raise ValueError(f"Douroucouli '{douroucouli}' not found.")
-
+    
     bubble = create_speech_bubble(message)
     print(f"\n{bubble}\n\n{douroucouli_art}")
+def tonal_hoot():
+    # Play the .wav file
+    playsound('douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav')
+
+def gruff_hoot(): 
+    playsound("douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav")
+
+def whoop():
+        # Play the .wav file
+    playsound("douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav")
 
 def main():
     parser = argparse.ArgumentParser(description="Print a message with douroucouli ASCII art.")
     parser.add_argument("message", type=str, help="The message to display.")
-    parser.add_argument("-d", "--douroucouli", type=str, default="douroucouli1", help="The douroucouli to use (default: douroucouli1).")
-
+    parser.add_argument("-d", "--douroucouli", type=str, help="The douroucouli to use. If not provided, a random douroucouli will be selected.")
+    
     args = parser.parse_args()
     douroucoulisay(args.message, args.douroucouli)
 

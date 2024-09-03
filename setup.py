@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='douroucoulisay',
-    version='0.1.1.4',
+    version='0.1.1.6',
     packages=find_packages(),
     entry_points={
     'console_scripts': [
         'douroucoulisay=douroucoulisay.douroucoulisay:main',  # main function should handle argparse and call douroucoulisay
         ],
     },
-    install_requires=[],
+    install_requires=["playsound"],
     include_package_data=True,
     package_data={
         '': ['assets/*.txt'],
