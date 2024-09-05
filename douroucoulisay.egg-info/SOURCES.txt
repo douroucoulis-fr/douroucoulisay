@@ -3,12 +3,16 @@ README.md
 setup.py
 douroucoulisay/__init__.py
 douroucoulisay/douroucoulisay.py
+douroucoulisay.egg-info/.DS_Store
 douroucoulisay.egg-info/PKG-INFO
 douroucoulisay.egg-info/SOURCES.txt
 douroucoulisay.egg-info/dependency_links.txt
 douroucoulisay.egg-info/entry_points.txt
 douroucoulisay.egg-info/requires.txt
 douroucoulisay.egg-info/top_level.txt
+douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav
+douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav
+douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav
 douroucoulisay/assets/douroucouli1.txt
 douroucoulisay/assets/douroucouli2.txt
 douroucoulisay/assets/douroucouli3.txt

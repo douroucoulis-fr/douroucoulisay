@@ -2,7 +2,8 @@ import os
 import argparse
 import random
 import textwrap
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 
 def get_douroucouli_art(name):
     """Fetch the ASCII art for the specified douroucouli."""
@@ -45,20 +46,22 @@ def douroucoulisay(message, douroucouli=None):
     print(f"\n{bubble}\n\n{douroucouli_art}")
     
 def tonal_hoot(repeat_count=1):
-    # Repeat the audio the specified number of times
+    """Play the 'tonal hoot' sound the specified number of times."""
+    sound = AudioSegment.from_wav('douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav')
     for _ in range(repeat_count):
-        playsound('douroucoulisay/assets/FemaleAnancymaaeHoot - Pine Girl.wav')
+        play(sound)
 
 def gruff_hoot(repeat_count=1): 
-    # Repeat the audio the specified number of times
+    """Play the 'gruff hoot' sound the specified number of times."""
+    sound = AudioSegment.from_wav('douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav')
     for _ in range(repeat_count):
-        playsound('douroucoulisay/assets/MaleAnancymaaeHoot - Onassis1.wav')
+        play(sound)
 
 def whoop(repeat_count=1):
-        # Repeat the audio the specified number of times
+    """Play the 'whoop' sound the specified number of times."""
+    sound = AudioSegment.from_wav('douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav')
     for _ in range(repeat_count):
-        # Play the .wav file
-        playsound('douroucoulisay/assets/FemaleAnancymaaeResonantWhoop - Spruce.wav')
+        play(sound)
 
 def main():
     parser = argparse.ArgumentParser(description="Print a message with douroucouli ASCII art.")
